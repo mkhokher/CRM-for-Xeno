@@ -50,7 +50,7 @@ router.post("/segments/preview", async (req, res) => {
         $lookup: {
           from: "orders",
           localField: "_id",
-          foreignField: "customerId",
+          foreignField: "customer",
           as: "orders",
         },
       },

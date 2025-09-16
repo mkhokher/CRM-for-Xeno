@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./CampaignHistory.css";
 
-const API = "http://localhost:5001/api";
+// const API = "http://localhost:5001/api";
+const API = import.meta.env.VITE_API_URL || "http://localhost:5001/api";
+
 
 export default function CampaignHistory() {
   const [logs, setLogs] = useState([]);

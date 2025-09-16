@@ -1,39 +1,4 @@
-// import express from "express";
-// import cors from "cors";
-// import dotenv from "dotenv";
-// import mongoose from "mongoose";
-// import apiRouter from "./routes/api.js";
 
-// dotenv.config();
-
-// const app = express();
-// const PORT = process.env.PORT || 5001;
-// const FRONTEND = process.env.FRONTEND_URL || "http://localhost:5173";
-
-// app.use(cors({ origin: FRONTEND, credentials: true }));
-// app.use(express.json());
-
-// console.log("Gemini key loaded?", process.env.GEMINI_API_KEY ? "yes" : "no");
-
-// //DB
-// mongoose.set("strictQuery", true);
-// mongoose
-//   .connect(process.env.MONGODB_URI, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//   })
-//   .then(() => console.log("MongoDB connected"))
-//   .catch((e) => console.error("MongoDB connection error:", e.message));
-
-// //Routes
-// app.use("/api", apiRouter);
-
-// //Health
-// app.get("/health", (_req, res) => res.json({ ok: true }));
-
-// app.listen(PORT, () =>
-//   console.log(`Server running on http://localhost:${PORT}`)
-// );
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";

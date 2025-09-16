@@ -1,18 +1,4 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
-// import CampaignForm from "./components/CampaignForm.jsx";
 
-// export default function App() {
-//   return (
-//     <div className="container">
-//       <header className="topbar">
-//         <h1>Xeno Mini-CRM</h1>
-//         <Link to="/campaigns" className="link">Campaign History →</Link>
-//       </header>
-//       <CampaignForm />
-//     </div>
-//   );
-// }
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CampaignForm from "./components/CampaignForm.jsx";

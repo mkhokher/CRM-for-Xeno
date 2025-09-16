@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./CampaignForm.css";
 
-const API = "http://localhost:5001/api";
+// const API = "http://localhost:5001/api";
+
+const API = import.meta.env.VITE_API_URL || "http://localhost:5001/api";
+
 
 export default function CampaignForm() {
   const [rules, setRules] = useState({ spends: "", visits: "", inactivity: "" });
