@@ -3,7 +3,7 @@ import axios from "axios";
 import "./CampaignHistory.css";
 
 // const API = "http://localhost:5001/api";
-const API = import.meta.env.VITE_API_URL || "http://localhost:5001/api";
+const API = import.meta.env.VITE_API_URL ||  "https://crm-for-xeno-by-manasvi.onrender.com/api";
 
 
 export default function CampaignHistory() {

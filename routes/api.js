@@ -17,10 +17,10 @@ router.post("/ai/suggest-message", async (req, res) => {
 
     if (spends > 1000) {
       message =
-        "Hi {name}, you’re one of our top customers! Enjoy a VIP discount on your next purchase 🎉";
+        "Hi {name}, you’re one of our top customers! Enjoy a VIP discount on your next purchase ";
     } else if (visits > 5) {
       message =
-        "Hi {name}, thanks for visiting us often. Here’s a special reward just for you 💙";
+        "Hi {name}, thanks for visiting us often. Here’s a special reward just for you ";
     } else if (inactivity > 30) {
       message =
         "Hi {name}, we miss you! Come back and get 20% off your next order.";
