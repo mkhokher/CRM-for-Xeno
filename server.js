@@ -1,4 +1,3 @@
-
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -32,9 +31,8 @@ app.use(passport.session());
 
 console.log("Gemini key loaded?", process.env.GEMINI_API_KEY ? "yes" : "no");
 
-// -----------------
+
 // MongoDB Connection
-// -----------------
 mongoose.set("strictQuery", true);
 mongoose
   .connect(process.env.MONGODB_URI, {
@@ -44,9 +42,8 @@ mongoose
   .then(() => console.log("MongoDB connected"))
   .catch((e) => console.error("MongoDB connection error:", e.message));
 
-// -----------------
+
 // Passport Google OAuth
-// -----------------
 passport.serializeUser((user, done) => {
   done(null, user);
 });
@@ -68,9 +65,8 @@ passport.use(
   )
 );
 
-// -----------------
+
 // Auth Routes
-// -----------------
 app.get(
   "/auth/google",
   passport.authenticate("google", { scope: ["profile", "email"] })
@@ -98,19 +94,14 @@ app.get("/auth/user", (req, res) => {
   }
 });
 
-// -----------------
-// API Routes
-// -----------------
 app.use("/api", apiRouter);
 
-// -----------------
+
 // Health Check
-// -----------------
 app.get("/health", (_req, res) => res.json({ ok: true }));
 
-// -----------------
+
 // Server Start
-// -----------------
 app.listen(PORT, () =>
   console.log(`Server running on http://localhost:${PORT}`)
 );
